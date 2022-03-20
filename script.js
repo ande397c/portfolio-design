@@ -43,7 +43,7 @@ function addAnimations() {
 
   gsap.from("span", { x: 400, opacity: 0, delay: 0.4, duration: 1, stagger: { amount: 0.7, from: "random" } });
 
-  gsap.from(".header_graphics", { scrollTrigger: ".header_graphics", delay: 0.2, duration: 1, x: "100rem", ease: Cubic.easeOut, stagger: { amount: 0.7, from: "random" } });
+  gsap.from(".header_graphics", { scrollTrigger: ".header_graphics", delay: 0.8, duration: 1, x: "100rem", ease: Cubic.easeOut, stagger: { amount: 0.7, from: "random" } });
 
   gsap.from("#intro", { scrollTrigger: "#intro", delay: 0.8, duration: 1, x: "100rem", ease: Cubic.easeOut, stagger: { amount: 0.7, from: "random" } });
 

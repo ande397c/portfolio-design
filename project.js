@@ -1,5 +1,5 @@
 "use strict";
-
+gsap.registerPlugin(ScrollTrigger);
 window.addEventListener("load", setup);
 const burger = document.querySelector(".burger");
 const links = document.querySelector(".nav_links");
@@ -29,6 +29,13 @@ function setup() {
       header.classList.remove("sticky", "toggle_nav");
     }
   };
+  animations();
+}
+
+function animations() {
+  gsap.from(".nav_container_project", { scrollTrigger: ".nav_container_project", delay: 1, duration: 1, y: "-20rem", ease: Cubic.easeOut, stagger: { amount: 0.5, from: "random" } });
+
+  gsap.from("#product article", { scrollTrigger: "#product article", delay: 1.2, duration: 1, x: "-300rem", ease: Cubic.easeOut, stagger: { amount: 1, from: 11 } });
 }
 
 function toggle() {

@@ -86,6 +86,23 @@ nav {
 
 .nav_container_project {
   background-color: var(--color-primary2);
+  z-index: 11;
+}
+
+.toggle_nav {
+  animation-name: toggle_nav_kf;
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes toggle_nav_kf {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
 }
 
 .empty_button {
@@ -433,7 +450,7 @@ header button {
   transform: rotate(90deg);
   width: 3rem;
   height: 3rem;
-  font-size: 2.7rem;
+  font-size: 2.6rem;
   color: var(--color-secondary1);
 }
 
