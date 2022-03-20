@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bigshot+One&family=Lato&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+
+     <!-- Icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>portfolio site</title>
+  </head>
+  <body>
+    <div class="nav_container">
+      <nav>
+        <div class="logo">
+          <img src="img/logo.png" alt="logo">
+        </div>
+
+        <ul class="nav_links">
+          <li>
+            <a href="#assignments"><button class="empty_button">Projects</button></a>
+          </li>
+
+          <li>
+            <a href="#contact"><button class="nav_button">Contact me</button></a>
+          </li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </div>
+
+    <header>
+      <div class="header_text">
+        <h1>Design for Developers - design and UI</h1>
+      </div>
+     
+       <div class="header_graphics"></div>
+   
+    </header>
+    <main>
+      <div class="arrow_splash">
+        <a href="#intro"> <img src="img/pil.svg" class="bouncing" alt="pil på bagrund" /> </a>
+      </div>
+
+      <section id="intro">
+        <h2>About this theme</h2>
+        <p>
+          This theme has been focusing on improving the design and UI. Among other by diving into the use of fonts, colors, animations, and responsive design. These subjects have furthermore been used in different assignments. Now
+          it´s time for you to explore it all.
+        </p>
+      </section>
+
+      <section id="assignments">
+        <h2>Assignments for this theme</h2>
+
+        <section id="card_container">
+          <article class="card">
+            <img src="img/Fonts_ui.png" alt="fonts and ui" />
+            <div class="card_text">
+              <h3>Fonts and UI cards</h3>
+              <p>This assignment was to create a mockup landing page design using fonts and gray scales only.</p>
+              <a href="fonts_ui.html"> <button class="card_button">View details</button></a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="img/colors_animations.png" alt="colors and animation" />
+            <div class="card_text">
+              <h3>Colors and animations</h3>
+              <p>The assignment is to apply a color pallet to a mockup landing page design, then add animations.</p>
+              <a href="colors_animations.html"><button class="card_button">View details</button></a>
+            </div>
+          </article>
+          <article class="card">
+            <img src="img/responsive_design.png" alt="responsive design" />
+            <div class="card_text">
+              <h3>Responsive design</h3>
+              <p>In this assignment, the goal is to transform a mockup landing page into a responsive layout.</p>
+              <a href="responsive_design.html"><button class="card_button">View details</button></a>
+            </div>
+          </article>
+          <article class="card">
+            <img src="img/frameworks.png" alt="frameworks" />
+            <div class="card_text">
+              <h3>Designing with frameworks</h3>
+              <p>This assignment was to do visual design using a framework only.</p>
+              <a href="frameworks.html"><button class="card_button">View details</button></a>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <section id="conclussion">
+        <h2>My thoughts on the theme</h2>
+        <p>This theme has served as a nice addition to 5 weeks of just pure javascript. In context to these weeks, working with design and UI has been refreshing. Besides that, a basic understanding of these areas are important to a frontend developer.</p>
+      </section>
+    </main>
+
+    <div id="customID" class="cta bounce hide">
+     <span>&#8249</span>
+    </div>
+
+    <footer>
+      <h2>Let's get in touch</h2>
+      <section id="contact">
+        <div class="wrapper">
+  <ul>
+    <li class="some"><a href="https://www.facebook.com/profile.php?id=100004809480510"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+    <li class="some"><a href="https://www.instagram.com/anderst25/"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+    <li class="some"><a href="mailto: anderstrapman@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+  </ul>
+</div>
+      </section>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

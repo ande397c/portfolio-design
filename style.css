@@ -1,0 +1,813 @@
+/* ...............General styling ............... */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
+
+body {
+  background-color: var(--color-primary1);
+  overflow-x: hidden;
+}
+
+img {
+  height: 100%;
+  max-width: 100%;
+}
+
+main h1 {
+  color: var(--color-secondary1);
+  text-align: center;
+  margin-top: 5rem;
+}
+
+p {
+  max-width: 50ch;
+}
+
+a {
+  color: var(--color-secondary1);
+}
+
+/* ...............Fonts ............... */
+
+h1 {
+  font-size: 2.5rem;
+  font-family: "Righteous", cursive;
+}
+
+p,
+h2,
+h3 {
+  font-family: "Lato", sans-serif;
+}
+
+/* ...............frontpage arrow ............... */
+
+.arrow_splash img {
+  max-width: 2rem;
+  transition: all 0.25s ease-in;
+}
+
+.arrow_splash img:hover {
+  scale: 1.3;
+}
+
+.arrow_splash img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* ...............Colors ............... */
+
+:root {
+  --color-primary1: #2c2d32;
+  --color-primary2: #282939;
+  --color-secondary1: #f4f4f5;
+  --color-accent1: #41bbac;
+  --color-accent2: #e66019;
+}
+
+/*  .......... Nav......... */
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 8vh;
+  position: relative;
+  z-index: 11;
+  transition: all 0.1s;
+}
+
+.nav_container_project {
+  background-color: var(--color-primary2);
+}
+
+.empty_button {
+  padding: 10px 20px;
+  background-color: var(--color-primary1);
+  border-radius: 10px;
+  display: inline-block;
+  cursor: pointer;
+  color: var(--color-secondary1);
+  font-family: Arial;
+  font-size: 17px;
+  text-decoration: none;
+  border: none;
+}
+
+.empty_button_project {
+  padding: 10px 20px;
+  background-color: var(--color-primary2);
+  border-radius: 10px;
+  display: inline-block;
+  cursor: pointer;
+  color: var(--color-secondary1);
+  font-family: Arial;
+  font-size: 17px;
+  text-decoration: none;
+  border: none;
+}
+
+.nav_links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  margin-left: auto;
+}
+
+.nav_links li {
+  list-style: none;
+  transition: all ease-in 0.1s;
+}
+
+.nav_links a {
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--color-secondary1);
+  font-family: "Lato", sans-serif;
+}
+
+.display {
+  opacity: 1;
+}
+
+.liFade {
+  animation-name: liFade_kf;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: all 0.3s;
+}
+
+@keyframes liFade {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-primary2);
+  transition: all 1s;
+  box-shadow: 0px 5px 12px 1px rgba(0, 0, 0, 0.61);
+}
+
+.toggle_nav {
+  animation-name: toggle_nav_kf;
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/*  .......... nav hover ......... */
+
+.nav_links li:hover {
+  scale: 1.1;
+}
+
+.nav_links a:hover {
+  color: var(--color-accent2);
+}
+
+/*  .......... logo ......... */
+
+.logo {
+  cursor: pointer;
+  padding-left: 1rem;
+  position: relative;
+  z-index: 100;
+}
+
+.logo img {
+  width: 4rem;
+  height: 4rem;
+}
+
+/*  .......... Burger ......... */
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: var(--color-secondary1);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.burger {
+  cursor: pointer;
+  display: none;
+}
+
+/*  .......... Header ......... */
+
+header {
+  display: flex;
+  min-height: 70vh;
+  padding: 4rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-primary2);
+}
+
+.header_graphics {
+  background-image: url("img/portfolio_pic.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40vh;
+  height: 40vh;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+header h1 {
+  color: var(--color-secondary1);
+  margin-bottom: 2rem;
+}
+
+header p {
+  color: var(--color-secondary1);
+}
+
+header button {
+  margin-bottom: 5rem;
+}
+
+/*  .......... Animationer ......... */
+
+.bouncing {
+  animation-name: bouncing_kf;
+  animation-duration: 1.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes bouncing_kf {
+  from {
+    transform: translateY(1vw);
+  }
+
+  to {
+    transform: translateY(3vw);
+  }
+}
+
+/* .......... Sections................ */
+
+#intro {
+  margin-top: 7rem;
+  padding: 0px 2rem;
+  background-color: var(--color-light);
+}
+
+#intro h2 {
+  color: var(--color-secondary1);
+  text-align: left;
+  font-size: 2.441rem;
+  margin-bottom: 1rem;
+  min-width: 20rem;
+}
+
+#intro p {
+  max-width: 50ch;
+  color: var(--color-secondary1);
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
+
+#assignments {
+  margin-top: 10rem;
+}
+
+#assignments h2 {
+  color: var(--color-secondary1);
+  text-align: center;
+  font-size: 2.441rem;
+  margin-bottom: 3.5rem;
+  margin-top: 3rem;
+  min-width: 20rem;
+}
+
+#card_container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* .......... Card styling ................ */
+
+.card {
+  background-color: #343541;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
+  max-width: 22rem;
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  box-shadow: 7px 7px 10px 1px rgba(122, 120, 120, 0.25);
+  transform: translateY(-10px);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card_text {
+  padding-block: 1rem;
+  padding-inline: 2rem;
+}
+.card_text h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-secondary1);
+  margin-bottom: 1.5rem;
+}
+.card_text p {
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.4;
+  color: var(--color-secondary1);
+}
+
+/* .......... Buttons ................ */
+
+.card_button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: var(--color-accent1);
+  border-radius: 10px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  text-decoration: none;
+  border: none;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+}
+
+.card_button:hover {
+  scale: 1.07;
+}
+
+/* .nav_button:hover {
+  scale: 1.01;
+} */
+
+.nav_button {
+  padding: 10px 20px;
+  background-color: var(--color-accent2);
+  border-radius: 10px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  text-decoration: none;
+  border: none;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+}
+
+/* .......... Outtro section ................ */
+
+#conclussion {
+  margin-top: 7rem;
+  padding: 0px 2rem;
+  background-color: var(--color-light);
+  margin-bottom: 3rem;
+}
+
+#conclussion h2 {
+  color: var(--color-secondary1);
+  text-align: left;
+  font-size: 2.441rem;
+  margin-bottom: 1rem;
+  min-width: 20rem;
+}
+
+#conclussion p {
+  max-width: 50ch;
+  color: var(--color-secondary1);
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
+
+/* .......... CTA bottom ................ */
+.cta {
+  position: fixed;
+  bottom: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  transition: all 0.3s;
+  background-color: var(--color-accent1);
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: 1rem;
+  box-shadow: 0px 5px 12px 1px rgba(0, 0, 0, 0.61);
+  text-align: center;
+  display: block;
+  transform: rotate(90deg);
+  width: 3rem;
+  height: 3rem;
+  font-size: 2.7rem;
+  color: var(--color-secondary1);
+}
+
+.cta:hover {
+  transform: translateX(-10px);
+}
+
+.hide {
+  opacity: 0;
+  right: -100%;
+}
+
+.show {
+  opacity: 1;
+  right: 0;
+}
+/* .......... Footer ................ */
+
+footer {
+  background-color: var(--color-primary2);
+  padding-block: 3rem;
+  min-height: 20vh;
+  margin-top: 3rem;
+}
+
+footer h2 {
+  text-align: center;
+  color: var(--color-secondary1);
+  font-size: 2.441rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.wrapper ul {
+  list-style: none;
+}
+
+.wrapper ul li {
+  width: 60px;
+  height: 60px;
+  line-height: 70px;
+  margin: 1rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid var(--color-secondary1);
+  float: left;
+  transition: all 0.2s ease;
+}
+
+.wrapper ul li:hover.some {
+  border: solid var(--color-accent1);
+  transition: all 0.2s ease;
+}
+
+.wrapper ul li:hover .fa-envelope {
+  color: var(--color-accent1);
+  transition: all 0.2s ease;
+}
+.wrapper ul li:hover .fa-facebook {
+  color: var(--color-accent1);
+  transition: all 0.2s ease;
+}
+.wrapper ul li:hover .fa-instagram {
+  color: var(--color-accent1);
+  transition: all 0.2s ease;
+}
+/* .......... Projects ................ */
+
+#product {
+  padding: 2rem;
+}
+
+#product h3 {
+  font-size: 1.953rem;
+  line-height: 2.5rem;
+  color: var(--color-secondary1);
+}
+
+#product p {
+  color: var(--color-secondary1);
+  margin-top: 1rem;
+  line-height: 1.6rem;
+  font-size: 1.1rem;
+}
+
+#product article {
+  display: grid;
+  grid-gap: 3rem;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+.product_text {
+  width: 50vw;
+  min-width: 300px;
+  margin-bottom: 4rem;
+}
+
+.last {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 2rem;
+  padding-inline: 5rem;
+}
+
+.last p {
+  margin-bottom: 2rem;
+}
+
+.product_text a {
+  color: var(--color-secondary1);
+}
+
+.product_graphics {
+  width: 15vw;
+  height: 15vw;
+  min-width: 150px;
+  min-height: 150px;
+  margin: 3rem;
+  background-color: var(--color-secondary1);
+  border-radius: 300px;
+}
+
+/* .......... Back button ................ */
+
+.back {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 2em;
+  margin: 2rem;
+  border-radius: 10px;
+  background-color: var(--color-accent1);
+  color: var(--color-secondary1);
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
+  width: 3rem;
+  height: 3rem;
+  padding-left: 1.1rem;
+  padding-top: 0.35rem;
+}
+
+.back:hover {
+  transform: translateY(-10px);
+}
+
+/* .......... @Media ................ */
+
+@media (min-width: 500px) {
+  h1 {
+    font-size: 3.2;
+  }
+
+  .header_graphics {
+    width: 50vh;
+    height: 50vh;
+  }
+
+  .last {
+    display: grid;
+    justify-items: center;
+    margin-bottom: 2rem;
+    padding-inline: 5rem;
+  }
+
+  #intro {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #conclussion {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10rem;
+  }
+
+  #intro h2 {
+    font-size: 3rem;
+  }
+  #intro p {
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+  }
+  #conclussion h2 {
+    font-size: 3rem;
+  }
+  #conclussion p {
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav_links {
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    top: 0vh;
+    background-color: var(--color-primary1);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+    justify-content: start;
+    z-index: 10;
+    gap: 5rem;
+    padding-top: 10rem;
+  }
+
+  .empty_button {
+    background-color: var(--color-primary1);
+    font-size: 1.4rem;
+  }
+
+  .empty_button_project {
+    padding: 10px 20px;
+    background-color: var(--color-primary1);
+    border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--color-secondary1);
+    font-family: Arial;
+    font-size: 17px;
+    text-decoration: none;
+    border: none;
+  }
+
+  .nav_button {
+    font-size: 1.4rem;
+  }
+
+  .burger {
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    padding-right: 20px;
+    z-index: 99;
+  }
+
+  .logo {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  .nav_toggle {
+    transform: translateX(0%);
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background-color: var(--color-accent2);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    background-color: var(--color-accent2);
+  }
+
+  .hover .line1 {
+    transform: translateY(-3px);
+    transition: all 0.3s;
+    background-color: var(--color-accent2);
+  }
+  .hover .line2 {
+    opacity: 0;
+    transition: all 0.3s;
+    background-color: var(--color-accent2);
+  }
+  .hover .line3 {
+    transform: translateY(3px);
+    transition: all 0.3s;
+    background-color: var(--color-accent2);
+  }
+
+  /* .arrow_splash {
+    display: none;
+  } */
+}
+
+@media (min-width: 800px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-bottom: 2rem;
+    padding-inline: 5rem;
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .nav_links {
+    width: 35%;
+  }
+
+  .header_graphics {
+    width: 60vh;
+    height: 60vh;
+  }
+
+  .card {
+    max-width: 30rem;
+  }
+  #product article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 5rem;
+  }
+
+  .product_text {
+    margin-top: 4rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .last {
+    display: grid;
+    justify-items: center;
+    padding-inline: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .nav_links {
+    width: 30%;
+  }
+
+  #intro {
+    justify-content: center;
+    gap: 7rem;
+    min-height: 60vh;
+  }
+
+  #card_container {
+    gap: 5rem;
+  }
+
+  .product_text {
+    margin-top: 4rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+
+  #product article {
+    grid-gap: 0;
+  }
+
+  #product p {
+    font-size: 1.1rem;
+    line-height: 1.55rem;
+  }
+
+  #conclussion {
+    justify-content: center;
+    gap: 4rem;
+  }
+}
